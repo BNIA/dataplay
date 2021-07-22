@@ -818,12 +818,10 @@ app.run()<h2>Working with GDrive Directories, Github, NBDev</h2>
 !pip install flask_ngrok
 from google.colab import drive
 drive.mount('/content/drive')
-%cd /content/drive/My Drive/'Software Development Documents'/dataplayInstalling collected packages: flask-ngrok
-Successfully installed flask-ngrok-0.0.25
-Mounted at /content/drive
+%cd /content/drive/My Drive/'Software Development Documents'/dataplayDrive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
 /content/drive/My Drive/Software Development Documents/dataplay
-project = 'dataguide' # 'dataguide' 'datalabs' 'dataplay' 'VitalSigns', 'DevelopersDocumentation'
-%cd ../{project}/ /content/drive/My Drive/Software Development Documents/dataguide
+project = 'datalabs' # 'dataguide' 'datalabs' 'dataplay' 'VitalSigns', 'DevelopersDocumentation'
+%cd ../{project}/ /content/drive/My Drive/Software Development Documents/datalabs
 import requests 
 from IPython.core.display import display, HTML<h4>SETUP</h4>
 addToHeader = """ <!-- ************************** MIDDLE --> <section class="middle row">"""
@@ -973,14 +971,21 @@ def about():
     return getHtml('lines.html')
  
 app.run()<h4>Run all</h4>
-lsCONTRIBUTING.md     [0m[01;34mindex_files[0m/  [01;34mnotebooks[0m/    [01;34mVitalSigns[0m/
-[01;34mdist[0m/               LICENSE       README.md     [01;34mVitalSigns.egg-info[0m/
-docker-compose.yml  Makefile      settings.ini
-[01;34mdocs[0m/               MANIFEST.in   setup.py
-!git rm -r docs -ffatal: pathspec 'docs' did not match any files
-!rm docs -rmkdir docsls[0m[01;34mbuild[0m/           [01;34mdataplay.egg-info[0m/  LICENSE      [01;34mnotebooks[0m/    setup.py
-CONTRIBUTING.md  [01;34mdist[0m/               Makefile     README.md
-[01;34mdataplay[0m/        [01;34mdocs[0m/               MANIFEST.in  settings.ini
+ls[0m[01;34mbuild[0m/              [01;34mdist[0m/    Makefile     settings.ini
+CONTRIBUTING.md     [01;34mdocs[0m/    MANIFEST.in  setup.py
+[01;34mdatalabs.egg-info[0m/  LICENSE  [01;34mnotebooks[0m/
+!git rm -r docs -frm 'docs/Courts_MechanicalSoup.html'
+rm 'docs/amivi_meetup.html'
+rm 'docs/index.html'
+rm 'docs/nb_2_html_tests.html'
+rm 'docs/nbdev_create_clean_publish.html'
+rm 'docs/scooter_exploration.html'
+rm 'docs/web_scraper.html'
+rm 'docs/wordclouds.html'
+!rm docs -rrm: cannot remove 'docs': No such file or directory
+mkdir docsls[0m[01;34mbuild[0m/              [01;34mdist[0m/    Makefile     settings.ini
+CONTRIBUTING.md     [01;34mdocs[0m/    MANIFEST.in  setup.py
+[01;34mdatalabs.egg-info[0m/  LICENSE  [01;34mnotebooks[0m/
 # ! nbdev_build_docs --fname '' # Makes the readme.md
 
 import os 
@@ -1007,57 +1012,47 @@ for file in os.listdir(r'notebooks'):
       f.write( resp )
       f.close()
 
-      # send it to my websesrver for saving.notebooks/00_core.ipynb
-47228notebooks/02_TidyAddr.ipynb
-48656notebooks/04_Create_Acs_Indicators_Original.ipynb
-205133notebooks/05_Create_Acs_Indicators.ipynb
-71310notebooks/93_Create_BCountyVitalSigns.ipynb
-66977notebooks/92_VitalSigns_Acs_Create_Indicators.ipynb
-51859notebooks/91_VitalSigns_Acs_Download.ipynb
-54318notebooks/HUD.ipynb
-50452notebooks/Infousa.ipynb
-107591notebooks/Mdprop_Permits_Fore_Vac Vio.ipynb
-98239notebooks/TreeBaltimore_TreePlnt.ipynb
-50254notebooks/RBIntel.ipynb
-67751notebooks/TidyAddr_EnochPratt.ipynb
-48912notebooks/01_Close Crawl.ipynb
-89734notebooks/90_ACS_Explore_and_Download.ipynb
-77529notebooks/03_convertVSSheetForWPUpload.ipynb
-797836notebooks/BCPSS_Schools.ipynb
-153919notebooks/Bidbalt_TaxSale_Taxlien.ipynb
-56303notebooks/BPD_P1_Visualizations.ipynb
-52476notebooks/BPD_P1.ipynb
-64742notebooks/CitiStat_Dirtyst_Clogged.ipynb
-60010notebooks/City_Liquor_Board_Permits.ipynb
-53206notebooks/CityFinance_histaxhometaxowntax.ipynb
-59689notebooks/DHR_SNAP_TANF_Create.ipynb
-57453notebooks/EnochPratt_Libcard.ipynb
-53077notebooks/FARES_Salpr_Shome.ipynb
-60734notebooks/FDIC_Banks.ipynb
-50265notebooks/index.ipynb
-60910<h4>Publishing a new Repo</h4>
+      # send it to my websesrver for saving.! nbdev_build_docs --fname '' --mk_readme TRUENo notebooks were modified
+converting /content/drive/My Drive/Software Development Documents/dataguide/notebooks/index.ipynb to README.md
+<h4>Publishing a new Repo</h4>
+lsCONTRIBUTING.md     [0m[01;34mindex_files[0m/  [01;34mnotebooks[0m/    [01;34mVitalSigns[0m/
+[01;34mdist[0m/               LICENSE       README.md     [01;34mVitalSigns.egg-info[0m/
+docker-compose.yml  Makefile      settings.ini
+[01;34mdocs[0m/               MANIFEST.in   setup.py
 #step 1
 ! git init
 ! git config --global user.email "bniajfi@gmail.com"
-! git config --global user.name "bniajfi"Reinitialized existing Git repository in /content/drive/My Drive/Software Development Documents/datalabs/.git/
+! git config --global user.name "bniajfi"Initialized empty Git repository in /content/drive/My Drive/Software Development Documents/VitalSigns/.git/
 #step 2
 ! git add *
 ! git commit -m "Second commit for styling"
 ! git branch -M main # https://github.com/settings/tokens# step 3
-token = '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'
+token = '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'
 username = 'BNIA'
 print(f'https://{token}@github.com/{username}/{project}.git')
 ! git remote remove origin 
 ! git remote add origin 'https://{token}@github.com/{username}/{project}.git'
 #! git push -u origin main 
-!git push 'https://{token}@github.com/{username}/{project}.git' <h5>Pypi</h5>
-lsCONTRIBUTING.md  [0m[01;34mdocs[0m/    Makefile     [01;34mnotebooks[0m/  settings.ini
-[01;34mdist[0m/            LICENSE  MANIFEST.in  README.md   setup.py
+!git push 'https://{token}@github.com/{username}/{project}.git' https://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@github.com/BNIA/VitalSigns.git
+fatal: No such remote: origin
+Counting objects: 92, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (91/91), done.
+Writing objects: 100% (92/92), 640.40 KiB | 2.10 MiB/s, done.
+Total 92 (delta 35), reused 0 (delta 0)
+remote: Resolving deltas: 100% (35/35), done.[K
+To https://github.com/BNIA/VitalSigns.git
+ * [new branch]      main -> main
+<h5>Pypi</h5>
+lsCONTRIBUTING.md     [0m[01;34mindex_files[0m/  [01;34mnotebooks[0m/    [01;34mVitalSigns[0m/
+[01;34mdist[0m/               LICENSE       README.md     [01;34mVitalSigns.egg-info[0m/
+docker-compose.yml  Makefile      settings.ini
+[01;34mdocs[0m/               MANIFEST.in   setup.py
 ! pip install twine
 ! nbdev_bump_version
-! make pypils[0m[01;34mbuild[0m/              [01;34mdist[0m/    Makefile     README.md
-CONTRIBUTING.md     [01;34mdocs[0m/    MANIFEST.in  settings.ini
-[01;34mdatalabs.egg-info[0m/  LICENSE  [01;34mnotebooks[0m/   setup.py
+! make pypils[0m[01;34mbuild[0m/           [01;34mdataplay.egg-info[0m/  LICENSE      [01;34mnotebooks[0m/    setup.py
+CONTRIBUTING.md  [01;34mdist[0m/               Makefile     README.md
+[01;34mdataplay[0m/        [01;34mdocs[0m/               MANIFEST.in  settings.ini
 #hide
 # https://nbdev.fast.ai/tutorial.html#Add-in-notebook-export-cell
 # https://nbdev.fast.ai/sync#nbdev_update_lib
