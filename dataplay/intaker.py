@@ -6,7 +6,7 @@ __all__ = ['Intake']
 import geopandas as gpd
 import numpy as np
 import pandas as pd
-from dataplay import geoms
+# conditionally loaded ->  from dataplay import geoms
 
 # Cell
 class Intake:
@@ -21,6 +21,7 @@ class Intake:
     if interactive: print('Getting Data From: ', url)
     try:
       if ([ele for ele in ['pgeojson', 'shp', 'geojson'] if(ele in url)]):
+        from dataplay import geoms
         df = geoms.readInGeometryData(url=url, porg=False, geom='geometry', lat=False, lng=False, revgeocode=False,  save=False, in_crs=2248, out_crs=False)
       elif  ('csv' in url): df = pd.read_csv( url )
       return df

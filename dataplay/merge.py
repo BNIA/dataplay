@@ -4,7 +4,6 @@ __all__ = ['mergeDatasets']
 
 # Cell
 from .intaker import Intake
-from VitalSigns.acsDownload import retrieve_acs_data
 
 # Cell
 # @title Run: Import Modules

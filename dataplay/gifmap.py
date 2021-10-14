@@ -16,8 +16,6 @@ from VitalSigns import acsDownload
 #@title Run This Cell: Import Modules
 
 # Once installed we need to import and configure the Widgets
-import ipywidgets as widgets
-!jupyter nbextension enable --py widgetsnbextension
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = 'all'
 import ipywidgets as widgets
@@ -75,7 +73,6 @@ from pandas import ExcelWriter
 from pandas import ExcelFile
 
 # load libraries
-%matplotlib inline
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

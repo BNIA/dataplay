@@ -7,6 +7,14 @@ index = {"Intake": "01_Download_and_Load.ipynb",
          "workWithGeometryData": "03_Map_Basics_Intake_and_Operations.ipynb",
          "map_points": "03_Map_Basics_Intake_and_Operations.ipynb",
          "readInGeometryData": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "u": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "rdf": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "ndf": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "n_periods": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "startAt": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "datetime_index": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "dt_index_epochs": "03_Map_Basics_Intake_and_Operations.ipynb",
+         "dt_index": "03_Map_Basics_Intake_and_Operations.ipynb",
          "convertNb": "04_nb_2_html.ipynb",
          "cleanCell": "04_nb_2_html.ipynb",
          "processCode": "04_nb_2_html.ipynb",
@@ -36,8 +44,8 @@ modules = ["intaker.py",
            "corr.py",
            "gifmap.py"]
 
-doc_url = "https://karpatic.github.io/dataplay/"
+doc_url = "https://bniajfi.github.io/dataplay/"
 
-git_url = "https://github.com/karpatic/dataplay/tree/master/"
+git_url = "https://github.com/bniajfi/dataplay/tree/main/"
 
 def custom_doc_links(name): return None
